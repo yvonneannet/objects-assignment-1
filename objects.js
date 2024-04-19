@@ -9,10 +9,10 @@ const people = [
    { name: 'Max', age: 19 },
     ];
 
-    function aboveEighteen(people){
+    function overEighteen(people){
        return people.filter(person => person.age>=18).map(person =>person.name);
     };
-    console.log(aboveEighteen(people));
+    console.log(overEighteen(people));
 
         
     
@@ -49,13 +49,13 @@ const students = [
     { name: 'Jill', scores: [85, 90, 84] },
        ];
 
-       function highAverageStudents(students) {
+       function averageScores(students) {
         return students.filter(student => {
         const aveScore = student.scores.reduce((total, score) => total + score, ) / student.scores.length;
         return aveScore >= 85;
         }).map(student => student.name);
         } 
-        const highAverage = highAverageStudents(students);
+        const highAverage = averageScores(students);
         console.log(highAverage);
 
 //       4.Given an object representing a car, with properties for the make, model, year, and a method to display the car's information, write a function that takes the car object and adds a new method to the object called age. The age method should return the current age of the car based on the current year and the car's year property. 
@@ -68,13 +68,13 @@ const car = {
         },
       };
 
-      function addAgeMethod (car) {
+      function addAge (car) {
         let currentYear = new Date().getFullYear();
         car.age = (currentYear - car.year);
         return car
        }
         
-        console.log(addAgeMethod(car));
+        console.log(addAge(car));
         car.displayInfo();
        
 
